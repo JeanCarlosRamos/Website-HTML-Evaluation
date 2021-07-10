@@ -1,0 +1,36 @@
+#intro {
+  /* Margin to fix overlapping fixed navbar */
+  margin-top: 58px;
+}
+@media (max-width: 991px) {
+  #intro {
+    /* Margin to fix overlapping fixed navbar */
+    margin-top: 45px;
+  }
+}
+body{
+  background-color: navy;
+  color: oldlace;
+}
+
+.intro{
+background-color: navy;
+}
+
+.card{
+  background-color: navy;
+}
+
+.back-button {
+    margin-top: 15px;
+    height: 35px;
+    width: 335px;
+    background-color:#d5e1db;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: 300 14px 'Lato', sans-serif;
+    letter-spacing: 2px;
+  }
