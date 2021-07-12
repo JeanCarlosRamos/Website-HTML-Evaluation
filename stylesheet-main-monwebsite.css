@@ -4,32 +4,21 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     justify-content: space-between;
     height: 200px;
     background-color:navy;
  }
- nav {
+
+nav {
     height: flex;
     width: 100%;
     justify-content: center;
     background-color: skyblue;
+	color: oldlace;
 }
-.article4 {
-    text-align: justify;
-    justify-content: space-between;
-    height: auto;
-    background-color: greenyellow ;
-}
-/*aside {
-    height: auto;
-    background-color: lightslategray;
-}
-.article1, .article2, .article3 {
-    height: auto;
-    background-color: deeppink;
-}
-*/
+
 footer {
     text-align: center;
     justify-content: center;
@@ -38,21 +27,138 @@ footer {
     margin-top: 10px;
     padding: 10px;
 }
+
 .logo, .badge {
     justify-content: center;
     align-items: center;
-    background-color: coral;
+    background-color: navy;
 }
-.back-button {
-    margin-top: 15px;
-    height: 35px;
-    width: 335px;
-    background-color:#d5e1db;
-    border-radius: 7px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font: 300 14px 'Lato', sans-serif;
-    letter-spacing: 2px;
+
+/* <---Styling Badge---> */
+.circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 150px;
+	height: 150px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 0 5px #4973ff;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.wave {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #4973ff;
+	border-radius: 50%;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.wave:before, .wave:after{
+	content: '';
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,-75%);
+	background: #000;
+}
+
+.wave:before {
+	border-radius: 45%;
+	background: rgba(255, 255, 255, 1);
+	animation: animate 5s linear infinite;
+}
+
+.wave:after{
+	border-radius: 40%;
+	background: rgba(255, 255, 255, .5);
+	animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+		0%
+		{
+		transform: translate(-50%,-75%) rotate(0deg);
+		}
+		100%
+		{
+		transform: translate(-50%,-75%) rotate(360deg);
+		}
+}
+/* <---Styling Carousel---> */
+.container-carousel {
+	width:100%;
+	height:72vh;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.slideshow {
+	list-style-type: none;
+}
+  
+  .slideshow, .slideshow:after { 
+	  position:relative;
+	  width:100%;
+	  height: 100%;
+  }
+  
+  .slideshow > li > span { 
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  top: 0px;
+	  left: 0px;
+	  color: transparent;
+	  background-size: cover;
+	  background-position: 75% 75%;
+	  background-repeat: no-repeat;
+	  opacity: 0;
+	  z-index: 0;
+	  animation: imageAnimation 30s linear infinite 0s; 
+  }
+  
+  .slideshow > li:nth-child(1) > span { 
+	  background-image: url("https://images.wallpaperscraft.com/image/waves_water_ocean_159170_1600x1200.jpg"); 
+  }
+
+  .slideshow > li:nth-child(2) > span { 
+	  background-image: url("https://images.wallpaperscraft.com/image/ocean_coast_horizon_140764_1600x1200.jpg");
+	  animation-delay: 6s; 
+  }
+
+  .slideshow > li:nth-child(3) > span { 
+	  background-image: url("https://images.wallpaperscraft.com/image/sea_beach_sand_90803_1600x1200.jpg");
+	  animation-delay: 12s; 
+  }
+
+  .slideshow > li:nth-child(4) > span { 
+	  background-image: url("https://images.wallpaperscraft.com/image/sea_beach_foam_84635_1600x1200.jpg");
+	  animation-delay: 18s; 
+  }
+
+  .slideshow > li:nth-child(5) > span { 
+	  background-image: url("https://images.wallpaperscraft.com/image/sea_beach_palm_trees_210637_1600x1200.jpg");
+	  animation-delay: 24s; 
+  }
+
+  @keyframes imageAnimation { 
+	  0% { opacity: 0; animation-timing-function: ease-in; }
+	  8% { opacity: 1; animation-timing-function: ease-out; }
+	  17% { opacity: 1 }
+	  25% { opacity: 0 }
+	  100% { opacity: 0 }
+  }
+  
+  @keyframes titleAnimation { 
+	  0% { opacity: 0 }
+	  8% { opacity: 1 }
+	  17% { opacity: 1 }
+	  19% { opacity: 0 }
+	  100% { opacity: 0 }
   }
